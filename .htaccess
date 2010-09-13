@@ -1,0 +1,66 @@
+# This is the .htacces file, it controls the URLs of the server
+# Using regex to identify variables and pass them through to
+# the index.php page
+
+# Activating the Rewrite Engine
+RewriteEngine on
+
+# All of the rules
+RewriteRule ^$ /index.php?message=1
+RewriteRule ^ical.ics$ /ical.php
+
+RewriteRule ^user/([0-9]+)(/)?$ /index.php?user=$1
+
+RewriteRule ^login(/)?$ /index.php?login
+RewriteRule ^enter/login(/)?$ /index.php?login&action=enter
+RewriteRule ^exit/login(/)?$ /index.php?login&action=exit
+
+RewriteRule ^messages(/)?$ /index.php?messages
+RewriteRule ^message/([0-9]+)(/)?$ /index.php?message=$1
+
+RewriteRule ^calendar(/)?$ /index.php?calendar
+RewriteRule ^calendar/([0-9]+)/([0-9]+)(/)?$ /index.php?calendar&year=$1&month=$2
+RewriteRule ^week/([0-9]+)/([0-9]+)/([0-9]+)(/)?$ /index.php?calendar&week&year=$1&month=$2&day=$3
+RewriteRule ^day/([0-9]+)/([0-9]+)/([0-9]+)(/)?$ /index.php?calendar&year=$1&month=$2&day=$3
+RewriteRule ^event/([0-9]+)(/)?$ /index.php?event=$1
+
+RewriteRule ^files(/)?$ /index.php?files
+RewriteRule ^file/([0-9]+)(/)?$ /index.php?file=$1
+
+RewriteRule ^contacts(/)?$ /index.php?contacts
+RewriteRule ^contact/user/([0-9]+)(/)?$ /index.php?user=$1
+RewriteRule ^contact/group/([0-9]+)(/)?$ /index.php?group=$1
+
+RewriteRule ^create(/)?$ /index.php?create
+RewriteRule ^create/message(/)?$ /index.php?create=message
+RewriteRule ^create/event(/)?$ /index.php?create=event
+RewriteRule ^create/file(/)?$ /index.php?create=file
+RewriteRule ^create/group(/)?$ /index.php?create=group
+RewriteRule ^create/user(/)?$ /index.php?create=user
+RewriteRule ^create/userData(/)?$ /index.php?create=userData
+RewriteRule ^create/message/([0-9]+)(/)?$ /index.php?create=message&parentId=$1
+RewriteRule ^create/file/([0-9]+)(/)?$ /index.php?create=file&parentId=$1
+RewriteRule ^create/event/([0-9]+)(/)?$ /index.php?create=event&parentId=$1
+RewriteRule ^create/event/([0-9]+)/([0-9]+)/([0-9]+)(/)?$ /index.php?create=event&year=$1&month=$2&day=$3
+
+RewriteRule ^edit/message/([0-9]+)(/)?$ /index.php?edit=message&message=$1
+RewriteRule ^edit/event/([0-9]+)(/)?$ /index.php?edit=event&event=$1
+RewriteRule ^edit/file/([0-9]+)(/)?$ /index.php?edit=file&file=$1
+RewriteRule ^edit/group/([0-9]+)(/)?$ /index.php?edit=group&group=$1
+RewriteRule ^edit/user/([0-9]+)(/)?$ /index.php?edit=user&user=$1
+RewriteRule ^edit/environment(/)?$ /index.php?edit=environment
+
+RewriteRule ^commit/message(/)?$ /index.php?commit=message
+RewriteRule ^commit/event(/)?$ /index.php?commit=event
+RewriteRule ^commit/file(/)?$ /index.php?commit=file
+RewriteRule ^commit/group(/)?$ /index.php?commit=group
+RewriteRule ^commit/user(/)?$ /index.php?commit=user
+RewriteRule ^commit/userData(/)?$ /index.php?commit=userData
+RewriteRule ^commit/attendance(/)?$ /index.php?commit=attendance
+RewriteRule ^commit/environment(/)?$ /index.php?commit=environment
+
+RewriteRule ^delete/message/([0-9]+)(/)?$ /index.php?delete=message&message=$1
+RewriteRule ^delete/event/([0-9]+)(/)?$ /index.php?delete=event&event=$1
+RewriteRule ^delete/file/([0-9]+)(/)?$ /index.php?delete=file&file=$1
+RewriteRule ^delete/group/([0-9]+)(/)?$ /index.php?delete=group&group=$1
+RewriteRule ^delete/user/([0-9]+)(/)?$ /index.php?delete=user&user=$1

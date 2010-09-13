@@ -1,0 +1,260 @@
+/* Clear calendar's float, using dialog inbuilt form element */
+#container .bd form {
+ clear:left;
+}
+
+/* Have calendar squeeze upto bd bounding box */
+#container .bd {
+ padding:0;
+}
+
+#container .hd {
+ text-align:left;
+}
+
+/* Center buttons in the footer */
+#container .ft .button-group {
+ text-align:center;
+}
+
+/* Prevent border-collapse:collapse from bleeding through in IE6, IE7 */
+#container_c.yui-overlay-hidden table {
+ *display:none;
+}
+
+/* Remove calendar's border and set padding in ems instead of px, so we can specify an width in ems for the container */
+#cal {
+ border:none;
+ padding:1em;
+}
+
+/* Datefield look/feel */
+.datefield {
+ position:relative;
+ top:10px;
+ left:10px;
+ white-space:nowrap;
+ border:1px solid black;
+ background-color:#eee;
+ width:25em;
+ padding:5px;
+}
+
+.datefield input,
+.datefield button,
+.datefield label  {
+ vertical-align:middle;
+}
+
+.datefield label  {
+ font-weight:bold;
+}
+
+.datefield input  {
+ width:15em;
+}
+
+.datefield button  {
+ padding:0 5px 0 5px;
+ margin-left:2px;
+}
+
+.datefield button img {
+ padding:0;
+ margin:0;
+ vertical-align:middle;
+}
+
+/* Example box */
+.box {
+ position:relative;
+ height:30em;
+}
+
+div {
+ text-align: left;
+ display: block;
+}
+
+a, a:visited {
+ color: #555555;
+ text-decoration: none;
+}
+
+a:hover {
+ color: #111111;
+ text-decoration: none;
+}
+
+.clear {
+ clear: both;
+}
+
+.span{
+ width: 100%;
+}
+
+.fl{
+ float: left;
+}
+
+.fr{
+ float: right;
+}
+
+.cl {
+ clear: left;
+}
+
+.cr {
+ clear: right;
+}
+
+.oneseventh{
+ height: 120px;
+}
+
+.dayNames, .oneseventh{
+ width: 14%;
+}
+
+.dayNames{
+ text-align: center;
+}
+
+.first{
+ width: 1%;
+}
+
+.topLine {
+ border-top: 1px solid #DDDDDD;
+}
+
+.bottomLine{
+ border-bottom: 1px solid #DDDDDD;
+}
+
+.rightLine {
+ border-right: solid 1px #DDDDDD;
+}
+
+.leftLine {
+ border-left: solid 1px #DDDDDD;
+}
+
+.subObject{
+ padding-left: 100px;
+ padding-right: 50px;
+}
+
+.topBuffer{
+ padding-top: 15px;
+}
+
+.bottomBuffer{
+ padding-bottom: 20px;
+}
+
+.ar{
+ text-align: right;
+}
+
+.cellEvent{
+ padding: 5px;
+ min-width: 70px;
+}
+
+.cellStyle{
+ background-color: #BBAA88;
+ height: 16px;
+ overflow: hidden;
+ margin-bottom: 2px;
+ padding-left: 2px;
+}
+
+.cellStyle a{
+ background-color: #BBAA88;
+ height: 16px;
+ overflow: hidden;
+ margin-bottom: 2px;
+ padding-left: 2px;
+display: block;
+}
+
+.cellStyle:hover{
+ background-color: #AA9977;
+}
+
+.cellStyle a:hover{
+ background-color: #AA9977;
+display: block;
+}
+
+.tc{
+ text-align: center;
+}
+
+.userPanel{
+ height: 120px;
+ width: 400px;
+}
+
+.recentMessages{
+ width: 300px
+}
+
+.loginPanel{
+ height: 90px;
+}
+
+.userLinks{
+ width: 100px;
+}
+
+.quickWeek{
+ width: 100%;
+}
+
+.calfix{
+ padding-right: 5px;
+}
+
+.userEditName{
+ width: 30%;
+ text-align: right;
+ height: 30px;
+}
+
+.userEditField{
+ width: 70%;
+ text-align: left;
+ height: 30px;
+}
+
+.logoArea{
+ background-image: url('http://oforos.tvolved.com/img/banner.png');
+ /* <? printHTML(fullURL(getLangVar("imageURL") . 'banner.png')); ?> */
+ background-repeat: no-repeat; height: 100px;
+}
+
+.siteMargins{
+ padding: 0px 120px 0px 120px;
+}
+
+.siteMinWidth{
+ min-width: 1200px;
+}
+
+.adminBar{
+ width: 100%;
+ position: fixed;
+ bottom: 0px;
+ background-color: #BBAA88;
+ height: 20px;
+ text-align: center;
+}
+
+.registerLink{
+ padding-right: 10px;
+ padding-left: 10px;
+}
